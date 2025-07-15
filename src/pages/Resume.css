@@ -1,0 +1,28 @@
+.resume-section {
+  background-color: #111;
+  color: #fff;
+  padding: 3rem 2rem;
+  text-align: center;
+}
+.resume-btn {
+  display: inline-block;
+  margin: 1rem 0 2rem;
+  padding: 0.8rem 1.2rem;
+  background: #00bfff;
+  color: #111;
+  border-radius: 8px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+.resume-btn:hover {
+  background: #0099cc;
+}
+.resume-frame {
+  width: 100%;
+  max-width: 800px;
+  height: 500px;
+  border: none;
+  margin-top: 2rem;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+}
