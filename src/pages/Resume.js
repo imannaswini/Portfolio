@@ -9,7 +9,7 @@ const Resume = () => {
 
       {/* ✅ Download button */}
       <a
-        href="/Mannaswini_Resume.pdf"
+        href="/Resume.pdf"
         download
         className="resume-btn"
       >
