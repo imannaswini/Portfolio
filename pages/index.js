@@ -52,14 +52,7 @@ const portfolioData = {
                 "Collaborated in two full project cycles, delivering intuitive UI/UX designs and ensuring seamless user experiences across devices."
             ]
         },
-        {
-            role: "Project Contributor",
-            company: "Girls Script Summer of Code(GSSoC)",
-            duration: "July 2025 - Present",
-            description: [
-                "Contributor at GirlScript Summer of Code (GSSoC 2025), where I fixed a critical navigation bar bug for the open-source project Creators Space."
-            ]
-        },
+        
         {
             role: "Project Contributor",
             company: "Open Source Connect India (OSCI)",
@@ -140,7 +133,14 @@ const portfolioData = {
             liveUrl: "#",
             githubUrl: "https://github.com/imannaswini/resume.git",
             // imageUrl: "https://placehold.co/600x400/1e293b/94a3b8?text=Dashboard"
-        }
+        },
+        {
+            title: "Kerala Migrant Health Record",
+            description: "A unified digital health platform designed to bridge the healthcare gap for migrant workers in Kerala. It features role-based portals for Government officials, Hospitals, and Workers, enabling secure health record management, real-time disease surveillance, and automated generation of digital health ID cards.",
+            tags: ["Next.js", "React", "TypeScript", "Node.js", "Express", "MongoDB", "Tailwind CSS", "Recharts", "Lucide React", "REST API", "Full Stack"],
+            liveUrl: "#",
+            githubUrl: "https://github.com/imannaswini/dhr"
+        },
     ],
     contact: {
         email: "iammannaswini@gmail.com",
