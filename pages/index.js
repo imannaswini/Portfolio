@@ -146,7 +146,7 @@ const portfolioData = {
         email: "iammannaswini@gmail.com",
         linkedin:"https://www.linkedin.com/in/mannaswini-p-a-7s7r7?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
         github: "https://github.com/imannaswini",
-        resumeUrl: "https://docs.google.com/document/d/1vCc15qDha1_2FprkM-XUkX65ZtTlgs23/edit?usp=sharing&ouid=108409438489335928274&rtpof=true&sd=true", // <-- ADD YOUR RESUME LINK HERE
+        resumeUrl: "https://drive.google.com/file/d/1o--bn3GCByhdHL3JZ4WprxPgaLZmZkpM/view?usp=drive_link", // <-- ADD YOUR RESUME LINK HERE
         formspreeEndpoint: "https://formspree.io/f/mgvnorgy" // IMPORTANT: Replace with your Formspree endpoint
     }
 };
