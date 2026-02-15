@@ -104,7 +104,7 @@ const portfolioData = {
         "Tools": [
             { name: "Git", icon: "https://img.icons8.com/color/48/000000/git.png" },
             { name: "GitHub", icon: "https://img.icons8.com/fluency/48/github.png" },
-            { name: "Jupyter", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jupyter/jupyter-original.svg" },
+            
             { name: "VS Code", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" }
         ]
     },
@@ -319,27 +319,36 @@ export default function App() {
         setFormData(prev => ({ ...prev, [name]: value }));
     };
 
+    // 
     const handleSubmit = async (e) => {
-        e.preventDefault();
-        setSubmissionStatus('sending');
-        try {
-            const response = await fetch(portfolioData.contact.formspreeEndpoint, {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify(formData),
-            });
-            if (response.ok) {
-                setSubmissionStatus('success');
-                setFormData({ name: '', email: '', role: '', phone: '', message: '' }); // Clear form
-                setTimeout(() => setSubmissionStatus(null), 5000); // Reset status after 5s
-            } else {
-                setSubmissionStatus('error');
-            }
-        } catch (error) {
-            console.error("Form submission error:", error);
+    e.preventDefault();
+    setSubmissionStatus('sending');
+
+    const formPayload = new FormData();
+    Object.entries(formData).forEach(([key, value]) => {
+        formPayload.append(key, value);
+    });
+
+    try {
+        const response = await fetch(portfolioData.contact.formspreeEndpoint, {
+            method: 'POST',
+            headers: { 'Accept': 'application/json' },
+            body: formPayload,
+        });
+
+        if (response.ok) {
+            setSubmissionStatus('success');
+            setFormData({ name: '', email: '', role: '', phone: '', message: '' });
+            setTimeout(() => setSubmissionStatus(null), 5000);
+        } else {
             setSubmissionStatus('error');
         }
-    };
+    } catch (error) {
+        console.error("Form submission error:", error);
+        setSubmissionStatus('error');
+    }
+};
+
 
     const sectionRefs = {
         home: useRef(null),
